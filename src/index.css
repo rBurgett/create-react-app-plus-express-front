@@ -1,0 +1,36 @@
+.page-title {
+    text-align: center;
+}
+div.jumbotron {
+    margin-bottom: 0;
+}
+nav div.nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+nav div.nav-container a {
+    flex-basis: 0;
+    flex-grow: 1;
+    background-color: #333;
+    color: #AAA;
+}
+nav div.nav-container a.active {
+    flex-basis: 0;
+    flex-grow: 1;
+    background-color: #444;
+    color: #FFF;
+}
+nav div.nav-container a:focus {
+    text-decoration: none;
+}
+nav div.nav-container a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+nav div.nav-container a div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
