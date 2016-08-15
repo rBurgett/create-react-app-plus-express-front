@@ -1,3 +1,5 @@
+/* global io */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, IndexRoute, hashHistory } from 'react-router';
@@ -7,6 +9,12 @@ import Home from './components/home';
 import JsonExample from './components/json-example';
 import SocketExample from './components/socket-example';
 import './index.css';
+
+window.socket = io('http://localhost:3300');
+window.socket.on('names', names => {
+    console.log('Received names!\n', names);
+});
+window.socket.emit('getNames');
 
 ReactDOM.render(
     <Router history={hashHistory}>
